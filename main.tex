@@ -2,6 +2,13 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{afterpage}
+\usepackage{capt-of}
+
+\graphicspath{ {images/} }
 
 \title{PDS Model(COP290-Design Practices)}
 
@@ -65,21 +72,61 @@ Laying out specifications for the problem is not a difficult task but becomes no
 \item Ensuring unadulterated and right amounts of food reach the beneficiaries
 \end{enumerate}
 
-\section{Proposed solution}
+\section{Proposed solution : ePDS}
 
-\subsection{Assumptions}
+As per the problems discussed and the specification it is clear that automation is required at the root level of PDS architecture. This automation can be done easily using electronic devices in today's digital world. The core components of ePDS are the software applications that address the needs of the consumer, the FPS retail outlet and the back-end server. All the stake-holders are able to access the public distribution system on a range of mobile devices such as low-cost cell-phones, smart-phones, tablets or even through the web. But before discussing the functional details of the solution let's discuss the assumption and relaxations kept for the solution.
 
-\subsection{Relaxations}
+\subsection{Assumptions and Relaxations}
+
+The PDS problem is one which many scholars and experienced officers have tried to address. Although the scope of the problem and it's applicability is largely restricted by the writer's extensive study but still limited understanding of the details. Considering this and some other assumptions as stated below I propose a solution for the PDS problem:
+
+\begin{enumerate}
+\item The PDS problem is considered by and large one of the most challenging domains for the Indian government. We consider that the problem statement is restricted to addressing the specifications as discussed earlier and no more. 
+\item For an efficient system that can be implemented throughout the country, it is must that it can reach even to the most remote areas. Although we rigorously consider various economic and social policies but still, we assume that the economic policies of the nation would support the proposed solution and funds won't cause a barrier to the implementation of the system.
+\item In an endeavor of the Honorable Prime Minister of the Country to lead the SmartINDIA revolution, we assume that the political constraints for the implementation would not hamper with the fully electronic and automated system.
+\item Converting the whole system to an online platform would require high expenditure to setup the technological framework. The solution proposed is considering such budget limitations but I also feel that for taking a big step to conquer one of the biggest challenges of the country it is a must that we take a big step towards addressing this.
+\item The model also assumes that the union of coverage areas of electricity, cellular network and web encompasses all the areas where the PDS system is proposed to reach. 
+\end{enumerate}
 
 \subsection{Design decisions}
- 
+ The ePDS system uses several key technologies to enable the mobile phone to function as an access device. These technologies include cellular infrastructure, electronic forms, identity management and electronic vouchers.
+\\ \\
+Cellular telephony allows the same digital communications infrastructure to support of voice and data applications simultaneously. Hence, the cellular communications infrastructure is used in the ePDS to enable the real-time exchange of data between mobile devices in the field and the application server. Important functions such as form-filling for request generation, identity verification and tracking of the service request over its entire life-cycle can now be done in near real-time.
+\\ \\
+Electronic forms are used for the primary interface between the consumer and the PDS. Forms are based on XForms technology, an open standard for the design and implementation of electronic forms. A forms interpreter is required for rendering electronic forms on any mobile device
+\\ \\
+Since large-scale errors in inclusion and exclusion have been identified as a major problem in the existing PDS, the proposed ePDS uses consumer identity management extensively for better targeting of the consumers.
+\\ \\
+The objective of identity management in the proposed system is to properly identify the target beneficiaries to provide them the services and entitlements in a transparent manner and prevent the use of fake identities to deter non-beneficiaries from manipulating the system.
+\\ \\
+Since the ePDS system is targeted towards the poor with relatively negligible access to modern banking services like mobile banking, an electronic voucher scheme has been developed to replicate the functionality of food coupons or other forms of entitlements in ePDS.
+
+
 \subsection{Functional model}
 
-\subsection{Implementation Constraints}
+The functional description of the design proposed is shown in the figure.
 
-\section{Further scope}
+\begin{landscape}% Landscape page
+\begin{figure}[h]
+\centering % Center table
+\includegraphics[width=20cm]{epds-functional-diagram}
+\captionof{figure}{Proposed functional description of the model}
+\end{figure}
+\end{landscape}
+
+We have divided the model into four major portions: retail consumer, ePDS retail ouput, identity management sector and ePDS server. When a retail consumer makes a request, the consumer's digital identity is sent by the retail outlet to the centralized identity management service to authenticate the consumer in real time. On successful authentication of the consumer's identity, a request is sent to the SmartPDS backend server for the food entitlements that are to be provided to the targeted consumer. On receiving the list of food entitlements, the retail outlet collects payment and dispenses the requested food items. Since the back-end server maintains a record of all transactions, it provides a check on the retail service provider and helps improve transparency in the distribution system.
+
+
+\subsection{Advantages}
+
+Improvement in service delivery is achieved through the use of electronic forms on low-cost cell-phones under the supervision of a workflow system to manage requests from mobile users and generate SMS alerts when the goods are ready. \\ \\Improvement in transparency is achieved through the tracking mechanism of a service request from its initiation by the consumer to its fulfillment by the retail outlet. Similarly, the transfer of entitlement benefits to the intended consumers is achieved through the use of electronic vouchers managed by a workflow-based tracking system. \\ \\ Transfer of benefits through an eVoucher system ensures cashless delivery which improves compliance for the targeted consumers. \\ \\This also helps in empowering poor consumers to access these food entitlement services at their doorstep.
+
 
 \section{Conclusions}
+
+This document presents a mobile technology enabled solution for improving service delivery in the Public Distribution System in India. Since the ePDS system uses mobile connectivity to properly authenticate users in a central database for transactions between the retail outlet and the end consumer, exclusion and inclusion errors can be controlled in near real-time. The mobile phone based ePDS system is scalable and replicable since it uses low-cost cell-phones and the existing cellular infrastructure. Hence the cost of technology intervention is relatively low and it can be replicated in other developing countries.
+
+\pagebreak
 
 \begin{thebibliography}{99}
 
