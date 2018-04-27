@@ -12,36 +12,35 @@
 
 \title{PDS Model(COP290-Design Practices)}
 
-\author{Sankalan Pal Chowdhury, Shreshth Tuli }
-
+\author{Shreshth Tuli$^{1}$}
 \date{April 2018}
 
 
 
 \begin{document}
 
-
-
 \maketitle
 
 \section{Background}
 India's Public Distribution System (PDS) is the largest distribution network of its kind in the world.  PDS was introduced around World War II as a war-time rationing measure.  Before the 1960s, distribution through PDS was generally dependent on imports of food grains.  It was expanded in the 1960s as a response to the food shortages of the time; subsequently, the government set up the Agriculture Prices Commission and the Food Corporation of India  to improve domestic procurement and storage of food grains for PDS.  By the 1970s, PDS had evolved into a universal scheme for the distribution of subsidized food.  In the 1990s, the scheme was revamped to improve access of food grains to people in hilly and inaccessible areas, and to target the poor.   Subsequently, in 1997, the government launched the Targeted Public Distribution System (TPDS), with a focus on the poor. \\ \\ TPDS aims to provide subsidized food and fuel to the poor through a network of ration shops.  Food grains such as rice and wheat that are provided under TPDS are procured from farmers, allocated to states and delivered to the ration shop where the beneficiary buys his entitlement.  The center and states share the responsibilities of identifying the poor, procuring grains and delivering food grains to beneficiaries. \\ \\ In September 2013, Parliament enacted the National Food Security Act, 2013.  The Act relies largely on the existing TPDS to deliver food grains as legal entitlements to poor households.  This marks a shift by making the right to food a justiciable right.  In order to understand the implications of this Act, the note maps the food supply chain from the farmer to the beneficiary, identifies challenges to implementation of TPDS, and discusses alternatives to reform TPDS.  It also details state-wise variations in the implementation of TPDS and discusses changes to the existing system by the Act. 
 
+\footnotetext[1]{This document and model have been developed after collective discussion and sharing ideas with Sankalan Pal Chowdhury}
+
 \section{Motivation}
 
-As there are many ration shops and the customers coming to buy from ration shops are normally believed to be below poverty line and illiterate, the customers are fooled to a large extent. There are complaints related to the quality of the product they receive, the quantity they receive is many a times less than the quantity demanded by them as the employees steal from it. Moreover, they end up paying more for the quantity they receive. Also the quantity which is added in the ration card is wrong. So they cannot buy more the next time they need. So there is a lot of cheating and fooling of the customers that takes place.\\ \\ In lieu of these problems, I propose some suggestive measures and improvements in the form of a succinct functional model. Prior to model description it is important that we analyze the current model and build a list of requirements and specifications. 
+As there are many ration shops and the customers coming to buy from ration shops are normally believed to be below poverty line and illiterate, the customers are fooled to a large extent. There are complaints related to the quality of the product they receive, the quantity they receive is many a times less than the quantity demanded by them as the employees steal from it. Moreover, they end up paying more for the quantity they receive. Also the quantity which is added in the ration card is wrong. So they cannot buy more the next time they need and there is a lot of cheating and fooling of the customers that takes place.\\ \\ In lieu of these problems, I propose some suggestive measures and improvements in the form of a succinct functional model. Prior to model description it is important that we analyze the current model and build a list of requirements and specifications. 
 
 \section{Demerits of current system}
 
 The current system faces many issues both in the design as well as implementation. Broadly these issues can be categorized into the following major domains:
 
 \begin{enumerate}
-\item CORRUPTION AND LEAKAGE OF FOOD GRAINS IN PDS : \\
+\item CORRUPTION AND LEAKAGE OF FOOD GRAINS IN PDS TO OPEN MARKET : \\
 Corruption is a major problem in developing countries like India. According to studies, in India about 40 percent of food grains channeled through public distribution system is diverted to the open market. Even though, the corruption exists in all the stages of system, it is clearly noticeable at fair price shops.
 \item QUALITY AND QUANTITY : \\
 Public distribution system in country suffers from irregular and poor quality of entitlements that distributed through fair price shops. The poor quality of food grains in PDS is evidence of public sector’s inefficiency in the state of Jammu and Kashmir and other states. Adulteration, quality and underweight is a major problem faced by the beneficiaries.
 \item BOGUS CARDS : \\
-The presence of bogus ration cards in the system makes significant challenges, the bogus cards are the cards that are issued for fictitious family and genuine ration cards are used by someone else. The actual entitlements that are meant for poor households are taken away by bogus cards. The bogus cards are mainly created by FPS owners for the purpose of making money through diverting entitlements to open market, it is obvious that the commission given by government is low for distribution of entitlements through FPS and people are willing to pay large amount of money illegally and illegally to obtain the dealership, because they can obtain huge money by diverting entitlements to open market using bogus cards.
+The presence of bogus ration cards in the system makes significant challenges, the bogus cards are the cards that are issued for fictitious family and genuine ration cards are used by someone else. The bogus cards are mainly created by FPS owners for the purpose of making money through diverting entitlements to open market, it is obvious that the commission given by government is low for distribution of entitlements through FPS and people are willing to pay large amount of money illegally and illegally to obtain the dealership, because they can obtain huge money by diverting entitlements to open market using bogus cards.
 \item WRONG CLASSIFICATION OF ECONOMIC STATUS : \\
 Government of India classifies the households based on their socio-economic status as above poverty line (APL), below poverty line (BPL) and Anthyodaya Anna Yojana (AAY) to distribute the PDS entitlements. Khera R, 2011 indicates, among the 400 studied samples 25 percent of households were wrongly classified as BPL and 44 percent of real BPL were classified as other classes in Rajasthan.
 \item NON-AVAILABILITY OF GRAINS AND IRREGULAR FUNCTION OF FPS : \\
@@ -74,7 +73,7 @@ Laying out specifications for the problem is not a difficult task but becomes no
 
 \section{Proposed solution : ePDS}
 
-As per the problems discussed and the specification it is clear that automation is required at the root level of PDS architecture. This automation can be done easily using electronic devices in today's digital world. The core components of ePDS are the software applications that address the needs of the consumer, the FPS retail outlet and the back-end server. All the stake-holders are able to access the public distribution system on a range of mobile devices such as low-cost cell-phones, smart-phones, tablets or even through the web. But before discussing the functional details of the solution let's discuss the assumption and relaxations kept for the solution.
+As per the problems discussed and the specification it is clear that automation is required at the root level of PDS architecture which can be done easily using electronic devices in today's digital world. The core components of ePDS are the software applications that address the needs of the consumer, the FPS retail outlet and the back-end server. All the stake-holders are able to access the public distribution system on a range of mobile devices such as low-cost cell-phones, smart-phones, tablets or even through the web. But before discussing the functional details of the solution let's discuss the assumption and relaxations kept for the solution.
 
 \subsection{Assumptions and Relaxations}
 
@@ -82,10 +81,10 @@ The PDS problem is one which many scholars and experienced officers have tried t
 
 \begin{enumerate}
 \item The PDS problem is considered by and large one of the most challenging domains for the Indian government. We consider that the problem statement is restricted to addressing the specifications as discussed earlier and no more. 
-\item For an efficient system that can be implemented throughout the country, it is must that it can reach even to the most remote areas. Although we rigorously consider various economic and social policies but still, we assume that the economic policies of the nation would support the proposed solution and funds won't cause a barrier to the implementation of the system.
+\item For an efficient system that can be implemented throughout the country, it is must that it can reach even to the most remote areas. Although we rigorously consider various economic and social policies but still, we assume that the economic policies of the nation would support the proposed solution and funds won't cause a barrier to the implementation of the system. We also assume that the beneficiaries have basic literacy and the visual and cognitive understanding to interact with the ePDS interface.
 \item In an endeavor of the Honorable Prime Minister of the Country to lead the SmartINDIA revolution, we assume that the political constraints for the implementation would not hamper with the fully electronic and automated system.
-\item Converting the whole system to an online platform would require high expenditure to setup the technological framework. The solution proposed is considering such budget limitations but I also feel that for taking a big step to conquer one of the biggest challenges of the country it is a must that we take a big step towards addressing this.
-\item The model also assumes that the union of coverage areas of electricity, cellular network and web encompasses all the areas where the PDS system is proposed to reach. 
+\item Converting the whole system to an online platform would require high expenditure to setup the technological framework. The solution proposed is considering such budget limitations but I also feel that for taking a big step to conquer one of the biggest challenges of the country, it is a must that we take a big step towards addressing this.
+\item The model also assumes that the union of coverage areas of electricity, cellular network and web encompasses all the areas where the PDS system is proposed to reach.
 \end{enumerate}
 
 \subsection{Design decisions}
@@ -109,7 +108,7 @@ The functional description of the design proposed is shown in the figure.
 \begin{landscape}% Landscape page
 \begin{figure}[h]
 \centering % Center table
-\includegraphics[width=20cm]{epds-functional-diagram}
+\includegraphics[width=20cm]{epds}
 \captionof{figure}{Proposed functional description of the model}
 \end{figure}
 \end{landscape}
